@@ -48,10 +48,10 @@ public class DataTypes
         Console.WriteLine("Name is Null!");
       }
       
-      Console.WriteLine($"The age is {age}");
-      Console.WriteLine($"The height is {height}");
-      Console.WriteLine($"The letter is {letter}");
-      Console.WriteLine($"The gender is {gender}");
+      Console.WriteLine($"The age is {age}.");
+      Console.WriteLine($"The height is {height}.");
+      Console.WriteLine($"The letter is {letter}.");
+      Console.WriteLine($"The gender is {gender}.");
 
     }
 }
