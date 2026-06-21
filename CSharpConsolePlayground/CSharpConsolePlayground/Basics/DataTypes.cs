@@ -30,28 +30,6 @@ public class DataTypes
 {
     public static void Run()
     {
-      // int, double, bool, char, string, and var
-      int age = 0;
-      double height = 0.0f;
-      char letter = 'A';
-      string name = null;
-      var gender = "gender";
-      
-      Console.WriteLine("Welcome to the profile reporter!");
-
-      if (name != null)
-      {
-        Console.WriteLine($"Welcome, {name}");
-      }
-      else
-      {
-        Console.WriteLine("Name is Null!");
-      }
-      
-      Console.WriteLine($"The age is {age}.");
-      Console.WriteLine($"The height is {height}.");
-      Console.WriteLine($"The letter is {letter}.");
-      Console.WriteLine($"The gender is {gender}.");
-
+        
     }
 }
