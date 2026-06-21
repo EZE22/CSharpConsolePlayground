@@ -32,13 +32,15 @@ public class DataTypes
     { 
       // int, double, bool, char, string, and var
       int age = 0;
-      double height = 0.0f;
+      double height = 0.0;
       char letter = 'A';
       string name = null;
       var gender = "gender";
+      bool isActive = false;
       
       Console.WriteLine("Welcome to the profile reporter!");
-
+      
+      
       if (name != null)
       {
         Console.WriteLine($"Welcome, {name}");
@@ -52,6 +54,7 @@ public class DataTypes
       Console.WriteLine($"The height is {height}");
       Console.WriteLine($"The letter is {letter}");
       Console.WriteLine($"The gender is {gender}");
+      Console.WriteLine($"Data Type {isActive.GetType()}");
       
     }
 }
