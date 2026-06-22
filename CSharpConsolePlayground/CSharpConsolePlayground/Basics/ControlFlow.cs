@@ -107,13 +107,19 @@ public class ControlFlow
         }
         
         Console.WriteLine("Do While Loop Counter:");
-        var doWhileCounter = 1; 
+        int input = 0;
         do
         {
-            Console.WriteLine(doWhileCounter);
-            doWhileCounter++;
-        } while (doWhileCounter < 6);
-        
+            Console.WriteLine("Enter a number greater than 10: ");
+            bool temp = int.TryParse(Console.ReadLine(), out input);
+            if (!temp)
+            {
+                Console.WriteLine("Invalid input.");
+                return;
+            }
+        } while (input <= 10);
+
+
     }
     
 }
