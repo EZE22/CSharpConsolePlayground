@@ -48,7 +48,7 @@ public class ControlFlow
             Console.WriteLine(name);
         }
         
-        Console.Write("\nTHE COUNT DOW!\n");
+        Console.Write("\nFor Loop COUNT DOW!\n");
         for (int index = 1; index < 6; index++)
         {
             Console.WriteLine(index);
@@ -56,25 +56,30 @@ public class ControlFlow
         
         Console.Write("\nEnter a grade: ");
         bool success = int.TryParse(Console.ReadLine(), out grade); 
+        if (!success)
+        {
+            Console.WriteLine("Invalid input.");
+            return;
+        }
         
-        if (grade <= 69)
+        if (grade <= 60)
         {
             letterGrade = 'F';
-        } else if (grade <= 79)
+        } else if (grade < 70)
         {
             letterGrade = 'D';
-        } else if (grade <= 80)
+        } else if (grade < 80)
         {
             letterGrade = 'C';
-        } else if (grade <= 89)
+        } else if (grade < 90)
         {
             letterGrade = 'B';
-        } else if (grade <= 90)
+        } else 
         {
             letterGrade = 'A';
         }
         
-        Console.WriteLine("\nCOUNTER TIME");
+        Console.WriteLine("\nWhile Loop COUNTER");
         int counter = 1;
         while (counter < 6)
         {
@@ -101,10 +106,13 @@ public class ControlFlow
                 break;
         }
         
-        
+        Console.WriteLine("Do While Loop Counter:");
+        var doWhileCounter = 1; 
+        do
         {
-            
-        }
+            Console.WriteLine(doWhileCounter);
+            doWhileCounter++;
+        } while (doWhileCounter < 6);
         
     }
     
