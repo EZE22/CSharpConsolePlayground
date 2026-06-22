@@ -30,6 +30,7 @@ class Program
     {
         //CSharpConsolePlayground.Basics.DataTypes.Run();
         //CSharpConsolePlayground.Basics.ControlFlow.Run();
-        CSharpConsolePlayground.Basics.Methods.Run();
+        //CSharpConsolePlayground.Basics.Methods.Run();
+        CSharpConsolePlayground.Basics.Classes.Run();
     }
 }
