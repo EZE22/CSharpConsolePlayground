@@ -29,6 +29,7 @@ class Program
     static void Main(string[] args)
     {
         //CSharpConsolePlayground.Basics.DataTypes.Run();
-        CSharpConsolePlayground.Basics.ControlFlow.Run();
+        //CSharpConsolePlayground.Basics.ControlFlow.Run();
+        CSharpConsolePlayground.Basics.Methods.Run();
     }
 }
