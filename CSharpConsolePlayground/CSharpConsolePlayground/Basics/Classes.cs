@@ -1,7 +1,7 @@
 /*
- * File:        Classes.cs
- * Folder:      Basics
- * Topic:       Classes & Objects
+ * File: Classes.cs
+ * Folder: Basics
+ * Topic: Classes & Objects
  *
  * Description:
  * Demonstrates how to define classes and create objects (instances) in C#.
@@ -33,6 +33,20 @@
  * Add a second constructor (overloaded) that allows creating a Person with only
  * some of the data, providing sensible defaults for the rest. Then add a static
  * property or method that tracks how many Person objects have been created.
+ *
+ * PascalCase (UpperCamelCase) — anything that's a "member" or a type:
+   
+   Class names: Person, Methods
+   Properties: Name, Age, City
+   Methods: Greeting(), Run()
+   Constants: MaxValue
+   
+   camelCase (lowerCamelCase) — local stuff inside a method:
+   
+   Local variables: lindsay, adam, counter
+   Method parameters: string name, int age
+ *
+ * 
  */
 
 namespace CSharpConsolePlayground.Basics;
@@ -42,5 +56,44 @@ public class Classes
     public static void Run()
     {
         Console.WriteLine("Classes");
+        Person lindsay = new Person("Lindsay", 40, "Temple");
+        Person adam = new Person("Adam", 45, "Temple");
+        Person ellie = new Person("Ellie");
+        Console.WriteLine(lindsay.Greeting());
+        Console.WriteLine(adam.Greeting());
+        Console.WriteLine(ellie.Greeting());
+        Console.WriteLine($"Total people created: {Person.Count}");
     }
+}
+
+class Person
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+    public string City { get; set; }
+    public static int Count { get; set; }
+
+    public Person(string name, int age, string city)
+    {
+        this.Name = name;
+        this.Age = age;
+        this.City = city;
+        Count++;
+    }
+
+    public Person(string name)
+    {
+        this.Name = name;
+        Count++;
+    }
+
+    public String Greeting()
+    {
+        return $"Welcome to the database! {this.Name} you have been \n" +
+               $"chosen to lead first because you are {this.Age} years old." +
+               $"Since you live in {this.City} you are required to do you work now.";
+    }
+    
+    
+    
 }
